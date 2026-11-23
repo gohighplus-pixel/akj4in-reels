@@ -4,7 +4,7 @@ import json, sys, subprocess, time, random, datetime as dt, urllib.parse, os
 IG = "17841441939311632"; API = "https://graph.facebook.com/v27.0"
 DRY = "--dry-run" in sys.argv
 Q = json.load(open("queue_cloud.json"))
-MIN_GAP_MIN = 100  # minimum minutes between two posts (slots are >= 2 h apart; runs are hourly)
+MIN_GAP_MIN = 50  # minimum minutes between two posts (slots are in different hours; runs are hourly)
 
 
 def call(method, path, params=None, timeout=120):
